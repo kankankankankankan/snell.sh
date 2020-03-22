@@ -14,7 +14,7 @@ if [ -f ${CONF} ]; then
   echo "Found existing config..."
   else
   if [ -z ${PSK} ]; then
-    PSK=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 30)
+    PSK=$(tr -dc A-Za-z0-9 </dev/urandom | head -c 25)
     echo "Using generated PSK: ${PSK}"
   else
     echo "Using predefined PSK: ${PSK}"
